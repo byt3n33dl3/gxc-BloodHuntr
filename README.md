@@ -11,10 +11,10 @@ Veins and Blood *hunting* knife for Active Directory Execution process.
 - Misc ./Misc : This directory is for helper tools to development PoCs in this repository.
 - PhantomDllHollower ./PhantomDllHollower : This PoC performs Phantom DLL Hollowing. See [README.md](./PhantomDllHollower/README.md).
 - PPIDSpoofing ./PPIDSpoofing : This PoC performs PPID Spoofing.
-- ProcessDoppelgaenging ./ProcessDoppelgaenging : This PoC performs Process Doppelgänging. Due to kernel protection improvement for Microsoft Defender, this technique does not work for recent Windows OS (since about 2021, maybe). So if you want to test this technique in newer environment, must be stop `Microsoft/Windows Defender Antivirus Service`. See [the issue](#)
+- ProcessDoppelgaenging ./ProcessDoppelgaenging : This PoC performs Process Doppelgänging. Due to kernel protection improvement for Microsoft Defender, this technique does not work for recent Windows OS (since about 2021, maybe). So if you want to test this technique in newer environment, must be stop `Microsoft` the `Windows Defender Antivirus Service`. See [the issue](#)
 - ProcessGhosting ./ProcessGhosting : This PoC performs Process Ghosting. Due to kernel protection, this technique does not work for newer Windows from 22H2.
 - [ProcessHerpaderping](./ProcessHerpaderping) : This PoC performs Process Herpaderping. Due to file lock issue, if you choose a fake image file smaller than you want to execute, file size shrinking will be failed and corrupt file signature for herpaderping process. To take full advantage of this technique, fake image file size should be larger than you want to execute. Due to kernel protection, this technique does not work for newer Windows from 22H2.
-- [ProcessHollowing](./ProcessHollowing) : This PoC performs Process Hollowing. Unlike the original, the PE image is parsed into a new memory area instead of using `ZwUnmapViewOfSection` / `NtUnmapViewOfSection`.
+- [ProcessHollowing](./ProcessHollowing) : This PoC performs Process Hollowing. Unlike the original, the PE image is parsed into a new memory area instead of using `ZwUnmapViewOfSection` or `NtUnmapViewOfSection`.
 - [ProcMemScan](./ProcMemScan) : This is a diagnostic tool to investigate remote process. See [README.md](./ProcMemScan/README.md).
 - [ProtectedProcess](./ProtectedProcess) : This toolset is for testing Protected Process. See [README.md](./ProtectedProcess/README.md).
 - [ReflectiveDLLInjection](./ReflectiveDLLInjection) : This toolset is for testing Reflective DLL Injection. See [README.md](./ReflectiveDLLInjection/README.md).
@@ -56,7 +56,7 @@ Veins and Blood *hunting* knife for Active Directory Execution process.
 
 - [Unknown Known DLLs](http://publications.alex-ionescu.com/Recon/Recon%202018%20-%20Unknown%20Known%20DLLs%20and%20other%20code%20integrity%20trust%20violations.pdf)
 - [Unreal Mode : Breaking Protected Processes](https://www.nosuchcon.org/talks/2014/D3_05_Alex_ionescu_Breaking_protected_processes.pdf)
-- [The Evolution of Protected Processes – Part 1: Pass-the-Hash Mitigations in Windows 8.1](https://www.crowdstrike.com/blog/evolution-protected-processes-part-1-pass-hash-mitigations-windows-81/)
+- The Evolution of Protected Processes [Part 1: Pass-the-Hash Mitigations in Windows 8.1](https://www.crowdstrike.com/blog/evolution-protected-processes-part-1-pass-hash-mitigations-windows-81/)
 
 ## Acknowledgments
 
